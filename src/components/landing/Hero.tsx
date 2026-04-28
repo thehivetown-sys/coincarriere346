@@ -1,5 +1,5 @@
-import { FileStack, Inbox, AlertTriangle } from "lucide-react";
 import { CtaButton } from "./CtaButton";
+import heroImage from "@/assets/hero.svg";
 
 export function Hero() {
   return (
@@ -26,26 +26,13 @@ export function Hero() {
           </div>
         </div>
 
-        {/* TOF visual placeholder */}
         <div className="relative animate-[fade-up_0.9s_ease-out_both]">
-          <div className="relative aspect-[5/4] w-full overflow-hidden rounded-2xl border border-border bg-card/60 bg-glass shadow-[var(--shadow-elegant)]">
-            <div className="absolute inset-0 bg-gradient-to-br from-secondary/40 via-transparent to-primary/20" />
-            <div className="relative flex h-full flex-col items-center justify-center gap-4 p-6 text-center">
-              <div className="relative">
-                <FileStack className="h-24 w-24 text-primary" strokeWidth={1.5} />
-                <span className="absolute -right-3 -top-3 grid h-9 w-9 animate-pulse place-items-center rounded-full bg-destructive text-xs font-bold text-destructive-foreground">
-                  +98
-                </span>
-              </div>
-              <div className="flex items-center gap-2 rounded-lg border border-destructive/40 bg-destructive/10 px-3 py-2 text-sm text-destructive-foreground">
-                <AlertTriangle className="h-4 w-4 text-destructive" />
-                Trop de CV à trier…
-              </div>
-              <div className="flex items-center gap-2 text-xs uppercase tracking-widest text-muted-foreground">
-                <Inbox className="h-4 w-4" /> Visuel TOF — recruteur débordé
-              </div>
-            </div>
-          </div>
+          <div className="pointer-events-none absolute -inset-6 rounded-3xl bg-primary/20 blur-3xl" />
+          <img
+            src={heroImage}
+            alt="Recruteur tech débordé par les CVs — CoinCarrière"
+            className="relative w-full h-auto rounded-2xl"
+          />
         </div>
       </div>
     </section>
