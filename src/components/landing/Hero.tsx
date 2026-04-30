@@ -12,10 +12,7 @@ export function Hero() {
           aria-hidden="true"
           className="h-full w-full object-cover object-center"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-background via-background/85 to-background/40" />
-        <div className="absolute inset-0 bg-gradient-to-t from-background via-background/20 to-transparent" />
       </div>
-      <div className="pointer-events-none absolute -top-40 left-1/2 h-[500px] w-[700px] -translate-x-1/2 rounded-full bg-primary/20 blur-[120px]" />
 
       <div className="mx-auto max-w-6xl px-4 pb-24 pt-16 md:pt-28 lg:pb-32">
         <div className="max-w-2xl animate-[fade-up_0.7s_ease-out_both]">
