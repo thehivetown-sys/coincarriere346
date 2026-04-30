@@ -15,7 +15,7 @@ export function Hero() {
       </div>
 
       <div className="mx-auto max-w-6xl px-4 pb-24 pt-16 md:pt-28 lg:pb-32">
-        <div className="max-w-2xl animate-[fade-up_0.7s_ease-out_both] rounded-2xl bg-background/80 p-6 backdrop-blur-sm ring-1 ring-border/40 shadow-xl sm:p-8">
+        <div className="max-w-2xl animate-[fade-up_0.7s_ease-out_both]">
           <span className="inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/10 px-3 py-1 text-xs font-semibold text-primary">
             <span className="h-1.5 w-1.5 rounded-full bg-primary" />
             Plateforme de recrutement tech au Maroc
