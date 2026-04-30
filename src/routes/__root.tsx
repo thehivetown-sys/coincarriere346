@@ -38,6 +38,13 @@ export const Route = createRootRoute({
       { name: "author", content: "CoinCarrière" },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
+      { property: "og:title", content: "CoinCarrière — Recrutez des développeurs qualifiés au Maroc" },
+      { name: "twitter:title", content: "CoinCarrière — Recrutez des développeurs qualifiés au Maroc" },
+      { name: "description", content: "Talent Connect Pro is a mobile-first landing page designed to generate leads for the CoinCarrière recruitment platform." },
+      { property: "og:description", content: "Talent Connect Pro is a mobile-first landing page designed to generate leads for the CoinCarrière recruitment platform." },
+      { name: "twitter:description", content: "Talent Connect Pro is a mobile-first landing page designed to generate leads for the CoinCarrière recruitment platform." },
+      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/c7da5654-50e9-4fe1-b032-82975f9afa45/id-preview-4fd88f65--66629f96-eff0-4c1c-8744-d6ede0ecfabe.lovable.app-1777592683026.png" },
+      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/c7da5654-50e9-4fe1-b032-82975f9afa45/id-preview-4fd88f65--66629f96-eff0-4c1c-8744-d6ede0ecfabe.lovable.app-1777592683026.png" },
     ],
     links: [
       { rel: "preconnect", href: "https://fonts.googleapis.com" },
