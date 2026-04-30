@@ -1,17 +1,41 @@
 import { CtaButton } from "./CtaButton";
-import heroImage from "@/assets/hero.svg";
+import heroAvif640 from "@/assets/hero-640.avif";
+import heroAvif1024 from "@/assets/hero-1024.avif";
+import heroAvif1600 from "@/assets/hero-1600.avif";
+import heroWebp640 from "@/assets/hero-640.webp";
+import heroWebp1024 from "@/assets/hero-1024.webp";
+import heroWebp1600 from "@/assets/hero-1600.webp";
+import heroJpg from "@/assets/hero-1600.jpg";
 
 export function Hero() {
   return (
     <section id="top" className="relative overflow-hidden">
-      {/* Background hero image */}
+      {/* Background hero image — LCP, eager + high priority */}
       <div className="absolute inset-0 -z-10">
-        <img
-          src={heroImage}
-          alt=""
-          aria-hidden="true"
-          className="h-full w-full object-cover object-center"
-        />
+        <picture>
+          <source
+            type="image/avif"
+            srcSet={`${heroAvif640} 640w, ${heroAvif1024} 1024w, ${heroAvif1600} 1600w`}
+            sizes="100vw"
+          />
+          <source
+            type="image/webp"
+            srcSet={`${heroWebp640} 640w, ${heroWebp1024} 1024w, ${heroWebp1600} 1600w`}
+            sizes="100vw"
+          />
+          <img
+            src={heroJpg}
+            alt=""
+            aria-hidden="true"
+            width={1600}
+            height={900}
+            decoding="async"
+            loading="eager"
+            // @ts-expect-error fetchpriority is valid HTML, React 19 supports it
+            fetchpriority="high"
+            className="h-full w-full object-cover object-center"
+          />
+        </picture>
       </div>
 
       <div className="mx-auto max-w-6xl px-4 pb-24 pt-16 md:pt-28 lg:pb-32">
