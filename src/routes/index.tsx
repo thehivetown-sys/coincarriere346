@@ -10,6 +10,7 @@ import { Stats } from "@/components/landing/Stats";
 import { FinalCta } from "@/components/landing/FinalCta";
 import { Footer } from "@/components/landing/Footer";
 import { StickyMobileCta } from "@/components/landing/StickyMobileCta";
+import { ChatWidget } from "@/components/landing/ChatWidget";
 
 const TITLE = "CoinCarrière — Recrutez des développeurs qualifiés au Maroc";
 const DESCRIPTION =
@@ -50,6 +51,7 @@ function Index() {
       <FinalCta />
       <Footer />
       <StickyMobileCta />
+      <ChatWidget />
     </main>
   );
 }
