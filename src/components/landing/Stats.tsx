@@ -1,6 +1,6 @@
 const stats = [
   { value: "3x", label: "plus rapide" },
-  { value: "70%", label: "de CV qualifiés" },
+  { value: "70%", label: "de CV en moins à traiter" },
   { value: "+1000", label: "développeurs actifs" },
 ];
 

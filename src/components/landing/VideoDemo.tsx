@@ -5,7 +5,10 @@ export function VideoDemo() {
     <section className="py-20">
       <div className="mx-auto max-w-5xl px-4">
         <h2 className="text-balance text-center text-3xl md:text-4xl">
-          Découvrez comment ça marche
+          Comment recruter un développeur en 72h{" "}
+          <span className="bg-gradient-to-r from-primary to-primary-glow bg-clip-text text-transparent">
+            (sans trier 100 CV)
+          </span>
         </h2>
         <p className="mx-auto mt-3 max-w-xl text-center text-muted-foreground">
           2 minutes pour comprendre comment CoinCarrière transforme votre recrutement.
