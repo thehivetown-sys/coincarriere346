@@ -1,12 +1,12 @@
 import { Target, Users, FlaskConical, Handshake, BarChart3, Globe } from "lucide-react";
 
 const items = [
-  { icon: Target, title: "Matching intelligent", desc: "Moins de CV inutiles, plus de profils pertinents." },
-  { icon: Users, title: "Pipeline visuel", desc: "Suivez chaque candidat à chaque étape." },
-  { icon: FlaskConical, title: "Tests techniques", desc: "Filtrez efficacement avant l'entretien." },
-  { icon: Handshake, title: "Collaboration équipe", desc: "Recrutez à plusieurs, sans friction." },
-  { icon: BarChart3, title: "Analytics", desc: "Optimisez vos recrutements avec la data." },
-  { icon: Globe, title: "Page carrière", desc: "Attirez plus de talents avec votre marque." },
+  { icon: Target, title: "Profils ciblés", desc: "Recevez uniquement des développeurs pertinents pour votre besoin." },
+  { icon: Users, title: "Pipeline clair", desc: "Visualisez et gérez vos candidats en quelques clics." },
+  { icon: FlaskConical, title: "Tests techniques", desc: "Évitez les candidats non qualifiés dès le départ." },
+  { icon: Handshake, title: "Collaboration équipe", desc: "Collaborez facilement avec votre équipe." },
+  { icon: BarChart3, title: "Décisions data", desc: "Optimisez votre recrutement avec des données claires." },
+  { icon: Globe, title: "Page carrière", desc: "Attirez plus de candidats qualifiés automatiquement." },
 ];
 
 export function Benefits() {
@@ -14,7 +14,7 @@ export function Benefits() {
     <section className="py-20">
       <div className="mx-auto max-w-6xl px-4">
         <h2 className="text-balance text-center text-3xl md:text-4xl">
-          Tout ce dont vous avez besoin pour recruter mieux
+          Tout ce qu'il faut pour recruter vite et bien
         </h2>
         <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {items.map((b) => (

@@ -8,7 +8,7 @@ export function CtaStrip({ source, text }: { source: string; text: string }) {
           <p className="text-balance text-center text-lg font-bold text-foreground md:text-left md:text-xl">
             {text}
           </p>
-          <CtaButton source={source}>Publier votre annonce</CtaButton>
+          <CtaButton source={source}>Recevoir des profils qualifiés</CtaButton>
         </div>
       </div>
     </section>

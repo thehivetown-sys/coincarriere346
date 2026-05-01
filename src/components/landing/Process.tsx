@@ -1,18 +1,18 @@
 import { FileText, Users, ClipboardCheck, Handshake } from "lucide-react";
 
 const steps = [
-  { icon: FileText, title: "Publiez votre offre tech" },
-  { icon: Users, title: "Recevez des profils qualifiés" },
-  { icon: ClipboardCheck, title: "Évaluez avec des tests techniques" },
-  { icon: Handshake, title: "Recrutez rapidement" },
+  { icon: FileText, title: "Publiez votre besoin", hint: "en 2 minutes" },
+  { icon: Users, title: "Recevez des profils", hint: "déjà qualifiés" },
+  { icon: ClipboardCheck, title: "Évaluez rapidement", hint: "sans perdre de temps" },
+  { icon: Handshake, title: "Recrutez", hint: "le bon développeur" },
 ];
 
 export function Process() {
   return (
-    <section className="py-20">
+    <section id="process" className="py-20">
       <div className="mx-auto max-w-6xl px-4">
         <h2 className="text-balance text-center text-3xl md:text-4xl">
-          Recruter en 4 étapes simples
+          Recrutez en 4 étapes simples
         </h2>
         <p className="mx-auto mt-3 max-w-xl text-center text-muted-foreground">
           Un processus pensé pour les recruteurs débordés.
@@ -32,6 +32,7 @@ export function Process() {
                 Étape {i + 1}
               </div>
               <h3 className="mt-2 text-base font-bold text-foreground">{s.title}</h3>
+              <p className="mt-1 text-sm text-muted-foreground">{s.hint}</p>
             </div>
           ))}
         </div>

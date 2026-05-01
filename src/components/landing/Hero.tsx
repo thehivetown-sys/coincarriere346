@@ -36,7 +36,6 @@ export function Hero() {
             className="h-full w-full object-cover object-right md:object-center"
           />
         </picture>
-        {/* Mobile readability overlay — strong gradient on small screens, none on desktop */}
         <div
           aria-hidden="true"
           className="absolute inset-0 bg-gradient-to-b from-background via-background/85 to-background/40 md:hidden"
@@ -51,21 +50,30 @@ export function Hero() {
         <div className="max-w-2xl animate-[fade-up_0.7s_ease-out_both]">
           <span className="inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/10 px-3 py-1 text-xs font-semibold text-primary">
             <span className="h-1.5 w-1.5 rounded-full bg-primary" />
-            Plateforme de recrutement tech au Maroc
+            +451 entreprises recrutent déjà avec nous
           </span>
           <h1 className="mt-5 text-balance text-4xl font-bold leading-[1.1] text-foreground sm:text-5xl lg:text-6xl">
-            Recrutez des développeurs qualifiés{" "}
+            Recevez des développeurs qualifiés{" "}
             <span className="bg-gradient-to-r from-primary to-primary-glow bg-clip-text text-transparent">
-              sans perdre de temps
-            </span>
+              en 72h
+            </span>{" "}
+            — sans trier des dizaines de CV inutiles
           </h1>
           <p className="mt-5 max-w-xl text-balance text-base text-foreground/80 sm:text-lg">
-            Recevez uniquement des profils tech pertinents grâce au matching intelligent CoinCarrière.
+            CoinCarrière vous envoie uniquement des profils déjà qualifiés et prêts à être recrutés.
           </p>
-          <div className="mt-8 flex flex-col items-start gap-3">
-            <CtaButton source="hero">Publier votre annonce maintenant</CtaButton>
-            <p className="text-sm text-foreground/70">✓ Gratuit pour commencer</p>
+          <div className="mt-8 flex flex-col items-start gap-3 sm:flex-row sm:items-center">
+            <CtaButton source="hero">Recevoir des profils qualifiés</CtaButton>
+            <a
+              href="#process"
+              className="inline-flex items-center justify-center rounded-xl border border-border bg-background/40 px-5 py-3 text-sm font-bold text-foreground transition-colors hover:bg-background/70"
+            >
+              Voir comment ça marche
+            </a>
           </div>
+          <p className="mt-3 text-sm text-foreground/70">
+            ✓ Mise en ligne en 2 minutes — sans engagement
+          </p>
         </div>
       </div>
     </section>

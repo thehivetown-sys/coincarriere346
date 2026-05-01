@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Header } from "@/components/landing/Header";
 import { Hero } from "@/components/landing/Hero";
+import { Problem } from "@/components/landing/Problem";
 import { SocialProof } from "@/components/landing/SocialProof";
 import { Process } from "@/components/landing/Process";
 import { CtaStrip } from "@/components/landing/CtaStrip";
@@ -12,9 +13,9 @@ import { Footer } from "@/components/landing/Footer";
 import { StickyMobileCta } from "@/components/landing/StickyMobileCta";
 import { ChatWidget } from "@/components/landing/ChatWidget";
 
-const TITLE = "CoinCarrière — Recrutez des développeurs qualifiés au Maroc";
+const TITLE = "CoinCarrière — Développeurs qualifiés en 72h, sans trier de CV";
 const DESCRIPTION =
-  "Trop de CV, pas assez de bons développeurs ? Recevez uniquement des profils tech pertinents grâce au matching intelligent CoinCarrière. Gratuit pour commencer.";
+  "Recevez uniquement des profils tech déjà qualifiés et prêts à être recrutés. Mise en ligne en 2 minutes — sans engagement. Premiers profils en 72h.";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -35,18 +36,19 @@ function Index() {
     <main className="min-h-screen">
       <Header />
       <Hero />
+      <Problem />
       <SocialProof />
       <Process />
       <CtaStrip
         source="strip-1"
-        text="Prêt à recevoir des profils qualifiés cette semaine ?"
+        text="Recevez vos premiers développeurs qualifiés en 72h."
       />
       <Benefits />
       <VideoDemo />
       <Stats />
       <CtaStrip
         source="strip-2"
-        text="Lancez votre première annonce en 2 minutes."
+        text="Lancez votre recrutement — résultats en 72h."
       />
       <FinalCta />
       <Footer />

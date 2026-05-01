@@ -18,7 +18,7 @@ export function StickyMobileCta() {
       }`}
     >
       <CtaButton source="sticky-mobile" className="w-full">
-        Publier votre annonce
+        Recevoir des profils qualifiés
       </CtaButton>
     </div>
   );
