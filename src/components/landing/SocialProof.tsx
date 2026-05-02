@@ -62,13 +62,13 @@ export function SocialProof() {
           <p className="text-center text-xs font-semibold uppercase tracking-widest text-muted-foreground">
             Ils nous font confiance
           </p>
-          <div className="mt-5 overflow-hidden rounded-xl">
+          <div className="mt-5 flex justify-center">
             <img
               src={companiesBar}
               alt="Entreprises partenaires de CoinCarrière"
               loading="lazy"
               decoding="async"
-              className="mx-auto h-auto w-full max-w-5xl opacity-90"
+              className="h-auto w-full max-w-4xl object-contain"
             />
           </div>
         </div>
