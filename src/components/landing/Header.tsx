@@ -10,7 +10,7 @@ export function Header() {
         </a>
         <div className="hidden md:block">
           <CtaButton source="header" size="md">
-            Recevoir des profils qualifiés
+            Commencer maintenant
           </CtaButton>
         </div>
       </div>

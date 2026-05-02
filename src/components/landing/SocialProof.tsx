@@ -1,4 +1,5 @@
-import { Quote } from "lucide-react";
+import { Quote, Star } from "lucide-react";
+import companiesBar from "@/assets/companies.png";
 
 const testimonials = [
   {
@@ -15,6 +16,16 @@ const testimonials = [
   },
 ];
 
+function Stars() {
+  return (
+    <div className="mt-3 flex items-center gap-0.5" aria-label="Note 5 sur 5">
+      {Array.from({ length: 5 }).map((_, i) => (
+        <Star key={i} className="h-4 w-4 fill-primary text-primary" />
+      ))}
+    </div>
+  );
+}
+
 export function SocialProof() {
   return (
     <section className="border-y border-border/50 bg-card/40 bg-glass py-14">
@@ -28,16 +39,6 @@ export function SocialProof() {
           <p className="mt-2 text-lg text-foreground">
             entreprises recrutent déjà sur <strong>CoinCarrière</strong>
           </p>
-          <div className="mt-6 flex flex-wrap items-center justify-center gap-3 opacity-70">
-            {["TECH·CO", "DEVLAB", "ATLAS·IT", "NEXA", "BYTEMA"].map((logo) => (
-              <div
-                key={logo}
-                className="rounded-md border border-border px-3 py-2 text-xs font-bold tracking-widest text-muted-foreground"
-              >
-                {logo}
-              </div>
-            ))}
-          </div>
         </div>
 
         <div className="mt-12 grid gap-5 md:grid-cols-3">
@@ -47,12 +48,29 @@ export function SocialProof() {
               className="rounded-2xl border border-border bg-background/40 p-6 shadow-[var(--shadow-elegant)]"
             >
               <Quote className="h-7 w-7 text-primary" />
+              <Stars />
               <blockquote className="mt-3 text-balance text-base leading-relaxed text-foreground">
                 « {t.quote} »
               </blockquote>
               <figcaption className="mt-4 text-sm text-muted-foreground">— {t.author}</figcaption>
             </figure>
           ))}
+        </div>
+
+        {/* Companies logo bar */}
+        <div className="mt-12">
+          <p className="text-center text-xs font-semibold uppercase tracking-widest text-muted-foreground">
+            Ils nous font confiance
+          </p>
+          <div className="mt-5 overflow-hidden rounded-xl">
+            <img
+              src={companiesBar}
+              alt="Entreprises partenaires de CoinCarrière"
+              loading="lazy"
+              decoding="async"
+              className="mx-auto h-auto w-full max-w-5xl opacity-90"
+            />
+          </div>
         </div>
       </div>
     </section>
