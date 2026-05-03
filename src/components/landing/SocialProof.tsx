@@ -1,6 +1,6 @@
 import { Quote, Star } from "lucide-react";
-import companiesBar from "@/assets/companies.png";
 import { AnimatedNumber } from "./AnimatedNumber";
+import { LogoMarquee } from "./LogoMarquee";
 
 const testimonials = [
   {
@@ -66,14 +66,8 @@ export function SocialProof() {
           <p className="text-center text-xs font-semibold uppercase tracking-widest text-muted-foreground">
             Ils nous font confiance
           </p>
-          <div className="mt-5 flex justify-center">
-            <img
-              src={companiesBar}
-              alt="Entreprises partenaires de CoinCarrière"
-              loading="lazy"
-              decoding="async"
-              className="h-auto w-full max-w-6xl object-contain"
-            />
+          <div className="mt-6">
+            <LogoMarquee />
           </div>
         </div>
       </div>
