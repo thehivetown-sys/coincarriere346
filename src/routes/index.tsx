@@ -12,6 +12,7 @@ import { FinalCta } from "@/components/landing/FinalCta";
 import { Footer } from "@/components/landing/Footer";
 import { StickyMobileCta } from "@/components/landing/StickyMobileCta";
 import { ChatWidget } from "@/components/landing/ChatWidget";
+import { useScrollReveal } from "@/hooks/use-scroll-reveal";
 
 const TITLE = "CoinCarrière — Développeurs qualifiés en 72h, sans trier de CV";
 const DESCRIPTION =
@@ -32,6 +33,7 @@ export const Route = createFileRoute("/")({
 });
 
 function Index() {
+  useScrollReveal();
   return (
     <main className="min-h-screen">
       <Header />

@@ -57,8 +57,29 @@
   50% { box-shadow: 0 0 50px 0 color-mix(in oklab, var(--primary) 80%, transparent); }
 }
 @keyframes marquee {
-  from { transform: translateX(0); }
-  to { transform: translateX(-50%); }
+  from { transform: translate3d(0, 0, 0); }
+  to { transform: translate3d(-50%, 0, 0); }
+}
+
+/* Pause marquee on hover for accessibility */
+.marquee-track:hover { animation-play-state: paused !important; }
+
+/* Scroll-reveal */
+[data-reveal] {
+  opacity: 0;
+  transform: translateY(28px);
+  transition:
+    opacity 0.8s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: opacity, transform;
+}
+[data-reveal].is-revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+@media (prefers-reduced-motion: reduce) {
+  [data-reveal] { opacity: 1; transform: none; transition: none; }
+  .marquee-track { animation: none !important; }
 }
 
 :root {
