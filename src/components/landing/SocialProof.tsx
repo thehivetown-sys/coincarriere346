@@ -1,5 +1,6 @@
 import { Quote, Star } from "lucide-react";
 import companiesBar from "@/assets/companies.png";
+import { AnimatedNumber } from "./AnimatedNumber";
 
 const testimonials = [
   {
@@ -30,11 +31,13 @@ export function SocialProof() {
   return (
     <section className="border-y border-border/50 bg-card/40 bg-glass py-14">
       <div className="mx-auto max-w-6xl px-4">
-        <div className="text-center">
+        <div className="text-center animate-[fade-up_0.7s_ease-out_both]">
           <div className="text-5xl font-bold tracking-tight md:text-6xl">
-            <span className="bg-gradient-to-r from-primary to-primary-glow bg-clip-text text-transparent">
-              +451
-            </span>
+            <AnimatedNumber
+              value={451}
+              prefix="+"
+              className="bg-gradient-to-r from-primary to-primary-glow bg-clip-text text-transparent"
+            />
           </div>
           <p className="mt-2 text-lg text-foreground">
             entreprises recrutent déjà sur <strong>CoinCarrière</strong>
@@ -42,10 +45,11 @@ export function SocialProof() {
         </div>
 
         <div className="mt-12 grid gap-5 md:grid-cols-3">
-          {testimonials.map((t) => (
+          {testimonials.map((t, i) => (
             <figure
               key={t.author}
-              className="rounded-2xl border border-border bg-background/40 p-6 shadow-[var(--shadow-elegant)]"
+              className="rounded-2xl border border-border bg-background/40 p-6 shadow-[var(--shadow-elegant)] transition-transform duration-300 hover:-translate-y-1 hover:shadow-[var(--shadow-glow)] animate-[fade-up_0.7s_ease-out_both]"
+              style={{ animationDelay: `${i * 120}ms` }}
             >
               <Quote className="h-7 w-7 text-primary" />
               <Stars />
@@ -68,7 +72,7 @@ export function SocialProof() {
               alt="Entreprises partenaires de CoinCarrière"
               loading="lazy"
               decoding="async"
-              className="h-auto w-full max-w-4xl object-contain"
+              className="h-auto w-full max-w-6xl object-contain"
             />
           </div>
         </div>
