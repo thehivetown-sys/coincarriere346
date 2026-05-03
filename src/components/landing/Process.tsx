@@ -11,10 +11,10 @@ export function Process() {
   return (
     <section id="process" className="py-20">
       <div className="mx-auto max-w-6xl px-4">
-        <h2 className="text-balance text-center text-3xl md:text-4xl">
+        <h2 className="text-balance text-center text-3xl md:text-4xl" data-reveal>
           Recrutez en 4 étapes simples
         </h2>
-        <p className="mx-auto mt-3 max-w-xl text-center text-muted-foreground">
+        <p className="mx-auto mt-3 max-w-xl text-center text-muted-foreground" data-reveal>
           Un processus pensé pour les recruteurs débordés.
         </p>
 
@@ -23,6 +23,8 @@ export function Process() {
           {steps.map((s, i) => (
             <div
               key={s.title}
+              data-reveal
+              data-reveal-delay={i * 120}
               className="relative flex flex-col items-center rounded-2xl border border-border bg-card/60 bg-glass p-6 text-center transition-transform duration-300 hover:-translate-y-1"
             >
               <div className="grid h-14 w-14 place-items-center rounded-full bg-primary text-primary-foreground glow-primary">
