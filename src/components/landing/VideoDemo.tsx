@@ -17,16 +17,16 @@ export function VideoDemo() {
   return (
     <section className="py-20">
       <div className="mx-auto max-w-5xl px-4">
-        <h2 className="text-balance text-center text-3xl md:text-4xl">
+        <h2 className="text-balance text-center text-3xl md:text-4xl" data-reveal>
           Comment recruter un développeur en 72h{" "}
           <span className="bg-gradient-to-r from-primary to-primary-glow bg-clip-text text-transparent">
             (sans trier 100 CV)
           </span>
         </h2>
-        <p className="mx-auto mt-3 max-w-xl text-center text-muted-foreground">
+        <p className="mx-auto mt-3 max-w-xl text-center text-muted-foreground" data-reveal>
           2 minutes pour comprendre comment CoinCarrière transforme votre recrutement.
         </p>
-        <div className="relative mt-10 aspect-video w-full overflow-hidden rounded-2xl border border-border bg-card/60 shadow-[var(--shadow-elegant)]">
+        <div className="relative mt-10 aspect-video w-full overflow-hidden rounded-2xl border border-border bg-card/60 shadow-[var(--shadow-elegant)]" data-reveal>
           <video
             ref={videoRef}
             className="h-full w-full object-cover"

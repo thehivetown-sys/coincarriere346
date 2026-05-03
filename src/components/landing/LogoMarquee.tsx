@@ -15,15 +15,16 @@ export function LogoMarquee() {
       className="group relative w-full overflow-hidden"
       style={{
         maskImage:
-          "linear-gradient(to right, transparent, black 10%, black 90%, transparent)",
+          "linear-gradient(to right, transparent, black 8%, black 92%, transparent)",
         WebkitMaskImage:
-          "linear-gradient(to right, transparent, black 10%, black 90%, transparent)",
+          "linear-gradient(to right, transparent, black 8%, black 92%, transparent)",
       }}
     >
       <div
-        className="flex w-max items-center gap-16 py-2"
+        className="marquee-track flex w-max items-center gap-20 py-4 md:gap-28"
         style={{
-          animation: "marquee 30s linear infinite",
+          animation: "marquee 40s linear infinite",
+          willChange: "transform",
         }}
       >
         {items.map((src, i) => (
@@ -34,7 +35,8 @@ export function LogoMarquee() {
             aria-hidden="true"
             loading="lazy"
             decoding="async"
-            className="h-16 w-auto shrink-0 opacity-80 transition-opacity hover:opacity-100 md:h-20"
+            draggable={false}
+            className="h-24 w-auto shrink-0 select-none opacity-80 transition-all duration-300 hover:scale-105 hover:opacity-100 md:h-32 lg:h-36"
           />
         ))}
       </div>
