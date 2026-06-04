@@ -1,9 +1,28 @@
+import { useEffect, useState } from "react";
 import { CtaButton } from "./CtaButton";
 import logo from "@/assets/logo.png";
 
 export function Header() {
+  const [hidden, setHidden] = useState(false);
+
+  useEffect(() => {
+    let lastY = window.scrollY;
+    const onScroll = () => {
+      const y = window.scrollY;
+      if (y > lastY && y > 80) setHidden(true);
+      else setHidden(false);
+      lastY = y;
+    };
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
   return (
-    <header className="sticky top-0 z-40 border-b border-border/40 bg-white/70 backdrop-blur-md shadow-sm">
+    <header
+      className={`sticky top-0 z-40 border-b border-border/40 bg-white/70 backdrop-blur-md shadow-sm transition-transform duration-300 ${
+        hidden ? "-translate-y-full" : "translate-y-0"
+      }`}
+    >
       <div className="mx-auto flex h-20 max-w-6xl items-center justify-between px-4">
         <a href="#top" className="flex items-center" aria-label="CoinCarrière">
           <img src={logo} alt="CoinCarrière" className="h-10 w-auto md:h-12" />
