@@ -19,7 +19,7 @@ export function Header() {
 
   return (
     <header
-      className={`sticky top-0 z-40 border-b border-border/40 bg-white/70 backdrop-blur-md shadow-sm transition-transform duration-300 ${
+      className={`sticky top-0 z-40 border-b border-white/10 bg-[var(--brand-deep)]/70 backdrop-blur-xl shadow-[0_4px_24px_-12px_rgba(0,0,0,0.6)] transition-transform duration-300 ${
         hidden ? "-translate-y-full" : "translate-y-0"
       }`}
     >
