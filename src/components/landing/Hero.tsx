@@ -46,23 +46,23 @@ export function Hero() {
         />
       </div>
 
-      <div className="mx-auto max-w-6xl px-4 pb-20 pt-12 sm:pb-24 sm:pt-16 md:pt-28 lg:pb-32">
+      <div className="mx-auto flex min-h-[calc(100svh-5rem)] max-w-6xl flex-col justify-center px-4 py-8 sm:py-10 md:py-12 lg:py-16">
         <div className="max-w-2xl animate-[fade-up_0.7s_ease-out_both]">
           <span className="inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/10 px-3 py-1 text-xs font-semibold text-primary">
             <span className="h-1.5 w-1.5 rounded-full bg-primary" />
             +451 entreprises recrutent déjà avec nous
           </span>
-          <h1 className="mt-5 text-balance text-4xl font-bold leading-[1.1] text-foreground sm:text-5xl lg:text-6xl">
+          <h1 className="mt-4 text-balance text-3xl font-bold leading-[1.1] text-foreground sm:text-4xl lg:text-5xl xl:text-6xl">
             Recevez des développeurs qualifiés{" "}
             <span className="bg-gradient-to-r from-primary to-primary-glow bg-clip-text text-transparent">
               en 72h
             </span>{" "}
             — sans trier des dizaines de CV inutiles
           </h1>
-          <p className="mt-5 max-w-xl text-balance text-base text-foreground/80 sm:text-lg">
+          <p className="mt-4 max-w-xl text-balance text-sm text-foreground/80 sm:text-base lg:text-lg">
             CoinCarrière vous envoie uniquement des profils déjà qualifiés et prêts à être recrutés.
           </p>
-          <div className="mt-8 flex flex-col items-start gap-3 sm:flex-row sm:items-center">
+          <div className="mt-6 flex flex-col items-start gap-3 sm:flex-row sm:items-center">
             <CtaButton source="hero">Recevoir des profils qualifiés</CtaButton>
             <a
               href="#process"
