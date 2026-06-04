@@ -24,10 +24,20 @@ export function Header() {
       }`}
     >
       <div className="mx-auto flex h-20 max-w-6xl items-center justify-between px-4">
-        <a href="#top" className="flex items-center" aria-label="CoinCarrière">
-          <span className="inline-flex items-center rounded-xl bg-white/95 px-3 py-1.5 shadow-md ring-1 ring-black/5">
-            <img src={logo} alt="CoinCarrière" className="h-8 w-auto md:h-10" />
-          </span>
+        <a href="#top" className="group relative flex items-center" aria-label="CoinCarrière">
+          <span
+            aria-hidden="true"
+            className="pointer-events-none absolute -inset-3 -z-10 rounded-full bg-[radial-gradient(ellipse_at_center,_var(--color-primary)_0%,_transparent_70%)] opacity-60 blur-xl transition-opacity duration-500 group-hover:opacity-90"
+          />
+          <span
+            aria-hidden="true"
+            className="pointer-events-none absolute -left-1 top-1/2 -z-10 h-10 w-10 -translate-y-1/2 rounded-full bg-primary/30 blur-md"
+          />
+          <img
+            src={logo}
+            alt="CoinCarrière"
+            className="relative h-10 w-auto drop-shadow-[0_2px_8px_rgba(0,0,0,0.45)] transition-transform duration-300 group-hover:scale-[1.03] md:h-12"
+          />
         </a>
         <div className="hidden md:block">
           <CtaButton source="header" size="md">
