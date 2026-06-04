@@ -113,7 +113,7 @@
 
   --border: oklch(1 0 0 / 12%);
   --input: oklch(1 0 0 / 15%);
-  --ring: oklch(0.66 0.16 232);
+  --ring: oklch(0.94 0.20 128);
 
   --brand-deep: oklch(0.13 0.03 240);          /* near #0A0A0A blue-tinted */
   --brand-dark: oklch(0.30 0.10 252);
