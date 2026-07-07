@@ -22,7 +22,7 @@ export function PrivacyDialog({ children }: { children: React.ReactNode }) {
             </DialogDescription>
           </DialogHeader>
 
-          <p className="mb-6 rounded-lg border border-primary/20 bg-primary/10 p-4 text-primary-foreground">
+          <p className="mb-6 rounded-lg border border-primary/20 bg-primary/10 p-4 text-foreground">
             Cette page est maintenue par CoinCarrière pour répondre aux questions courantes de sécurité et de confidentialité. Elle constitue une politique approuvée par le responsable du traitement et n’est pas une certification ou une vérification indépendante par Lovable.
           </p>
 
